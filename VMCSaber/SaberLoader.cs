@@ -81,8 +81,13 @@ public class SaberLoader: MonoBehaviour
 
         var color = saberType == SaberType.Left ? _leftColor : _rightColor;
 
-        foreach (var renderer in saber.GetComponentsInChildren<MeshRenderer>())
+        foreach (var renderer in saber.GetComponentsInChildren<Renderer>())
         {
+            if (renderer is not MeshRenderer && renderer is not SkinnedMeshRenderer)
+            {
+                continue;
+            }
+            
             var hasColor = false;
             foreach (var material in renderer.sharedMaterials)
             {
