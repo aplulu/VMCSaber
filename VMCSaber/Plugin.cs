@@ -8,7 +8,7 @@ using VMCMod;
 
 [VMCPlugin(
     Name: "VMCSaber",
-    Version: "0.1.0",
+    Version: "0.2.0",
     Author: "Aplulu",
     Description: "Draw Saber on Virtual Motion Capture",
     AuthorURL: "https://aplulu.me"
