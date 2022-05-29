@@ -8,7 +8,7 @@ Draw Saber on Virtual Motion Capture
 ## Requirements
 
 * [Virtual Motion Capture v0.52b7+](https://akira.fanbox.cc/)
-* [VMCSaber-BS v0.1.0](https://github.com/aplulu/VMCSaber-BS)
+* [VMCSaber-BS v0.2.0](https://github.com/aplulu/VMCSaber-BS)
 
 ## Download
 
