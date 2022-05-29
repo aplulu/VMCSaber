@@ -12,6 +12,8 @@ public class SaberLoader: MonoBehaviour
     private float _scale = 1.0f;
     private Vector3 _leftControllerRot = Vector3.zero;
     private Vector3 _rightControllerRot = Vector3.zero;
+    private Vector3 _leftControllerPos = Vector3.zero;
+    private Vector3 _rightControllerPos = Vector3.zero;
     private bool _experimentalTrail = false;
 
     public static void Initialize()
@@ -157,6 +159,7 @@ public class SaberLoader: MonoBehaviour
         }
 
         saber.transform.localRotation = Quaternion.Euler(0, 0, saberType == SaberType.Left ? -90 : 90);
+        saber.transform.Translate(saberType == SaberType.Left ? _leftControllerPos : _rightControllerPos);
         saber.transform.Rotate(saberType == SaberType.Left ? _leftControllerRot : _rightControllerRot);
         saber.transform.localScale = new Vector3(_scale, _scale, _scale);
     }
@@ -188,6 +191,26 @@ public class SaberLoader: MonoBehaviour
         set
         {
             _rightControllerRot = value;
+            ApplySaberPosition(SaberType.Right);
+        }
+    }
+    
+    public Vector3 LeftControllerPos
+    {
+        get => _leftControllerPos;
+        set
+        {
+            _leftControllerPos = value;
+            ApplySaberPosition(SaberType.Left);
+        }
+    }
+    
+    public Vector3 RightControllerPos
+    {
+        get => _rightControllerPos;
+        set
+        {
+            _rightControllerPos = value;
             ApplySaberPosition(SaberType.Right);
         }
     }

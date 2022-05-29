@@ -7,13 +7,13 @@
 
     <ItemGroup>
         <Reference Include="Assembly-CSharp">
-          <HintPath>..\..\..\app\VirtualMotionCapture0.52b7\VirtualMotionCapture_Data\Managed\Assembly-CSharp.dll</HintPath>
+          <HintPath>$(VMCPath)\VirtualMotionCapture_Data\Managed\Assembly-CSharp.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-            <HintPath>$(VMCPath)\VirtualMotionCapture_Data\Managed\UnityEngine.dll</HintPath>
+          <HintPath>$(VMCPath)\VirtualMotionCapture_Data\Managed\UnityEngine.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.AnimationModule">
-            <HintPath>$(VMCPath)\VirtualMotionCapture_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+          <HintPath>$(VMCPath)\VirtualMotionCapture_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.AssetBundleModule">
           <HintPath>$(VMCPath)\VirtualMotionCapture_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
@@ -28,10 +28,10 @@
           <HintPath>$(VMCPath)\VirtualMotionCapture_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.InputLegacyModule">
-          <HintPath>..\..\..\app\VirtualMotionCapture0.52b7\VirtualMotionCapture_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+          <HintPath>$(VMCPath)\VirtualMotionCapture_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.InputModule">
-          <HintPath>..\..\..\app\VirtualMotionCapture0.52b7\VirtualMotionCapture_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+          <HintPath>$(VMCPath)\VirtualMotionCapture_Data\Managed\UnityEngine.InputModule.dll</HintPath>
         </Reference>
         <Reference Include="VMCMod, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
           <HintPath>$(VMCPath)\VirtualMotionCapture_Data\Managed\VMCMod.dll</HintPath>

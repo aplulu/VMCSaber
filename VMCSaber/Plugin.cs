@@ -152,6 +152,27 @@ public class VMCSaber: MonoBehaviour
                     }
                 }
                 break;
+            case "/VMCSaber/Controller/Pos/Left":
+            case "/VMCSaber/Controller/Pos/Right":
+                if (message.values != null &&
+                    message.values.Length == 3 &&
+                    message.values[0] is float &&
+                    message.values[1] is float &&
+                    message.values[2] is float &&
+                    SaberLoader.Instance != null)
+                {
+                    var pos = new Vector3((float)message.values[0], (float)message.values[1], (float)message.values[2]);
+                    Log($"Pos address={message.address}, pos={pos}");
+                    if (message.address == "/VMCSaber/Controller/Pos/Left")
+                    {
+                        SaberLoader.Instance.LeftControllerPos = pos;
+                    }
+                    else
+                    {
+                        SaberLoader.Instance.RightControllerPos = pos;
+                    }
+                }
+                break;
         }
     }
 
